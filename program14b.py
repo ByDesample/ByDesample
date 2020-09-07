@@ -1,4 +1,4 @@
-file = open("küfür.txt", "r", encoding="utf-8")
+file = open("program14b.txt", "r", encoding="utf-8")
 
 kelime = ""
 while True:
