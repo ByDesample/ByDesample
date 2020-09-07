@@ -1,20 +1,19 @@
-file = open("program14b.txt", "r", encoding="utf-8")
+with open("banned_words.txt") as dosya:
+    banned_words = []
+    while True:
+        bannedWord = dosya.readline()
+        if bannedWord == "":
+            break
+        else:
+            banned_words.append(bannedWord)
 
-kelime = ""
-while True:
-    bannedWord = file.readline()
-    if bannedWord == "":
-        break
-    else:
-        kelime += bannedWord
 
-
-string = input("Enter word: ")
-words = string.split()
-string = ""
-for word in words:
-    if word in kelime:
-        string += "*** "
-    else:
-        string += f"{word} "
+    string = input("Enter word: ")
+    words = string.split()
+    string = ""
+    for word in words:
+        if word in banned_words:
+            string += "*** "
+        else:
+            string += f"{word} "
 print(string)
