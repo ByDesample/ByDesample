@@ -7,7 +7,6 @@ with open("banned_words.txt", encoding="utf-8") as file:
             banned_words += ban
         else:
             break
-        print(banned_words)
 
     string = input("Enter word: ")
     words = string.split()
