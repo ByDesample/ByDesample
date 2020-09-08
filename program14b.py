@@ -1,12 +1,13 @@
-with open("banned_words.txt") as dosya:
+with open("banned_words.txt", encoding="utf-8") as file:
     banned_words = []
     while True:
-        bannedWord = dosya.readline()
-        if bannedWord == "":
-            break
+        bannedWord = file.readline()
+        ban = bannedWord.split()
+        if len(ban) >= 1:
+            banned_words += ban
         else:
-            banned_words.append(bannedWord)
-
+            break
+        print(banned_words)
 
     string = input("Enter word: ")
     words = string.split()
