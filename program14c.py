@@ -15,6 +15,6 @@ words = s.split()
 
 for i, word in enumerate(words):
     if word.lower() in banned_words:
-        words[i] = word[0] + masking_char * (int(len(word)) -1)
+        words[i] = word[0] + masking_char * (len(word) -1)
 
 print(' '.join(words))
