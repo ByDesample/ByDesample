@@ -1,5 +1,6 @@
+print("İşlem Giriniz (Çıkmak için Enter'a basınız).")
 while True:
-    command = input("Bir işlem giriniz(sayı | işlem | sayı): ")
+    command = input()
 
     if command == "":
         print("Kullanıcı Çıkışı.")
@@ -13,14 +14,14 @@ while True:
 
         try:
             if operator == "+":
-                print(f"{number_1} + {number_2} = {int(number_1) + int(number_2)}")
+                print(f"{number_1} + {number_2} = {float(number_1) + float(number_2)}")
             elif operator == "-":
-                print(f"{number_1} - {number_2} = {int(number_1) - int(number_2)}")
+                print(f"{number_1} - {number_2} = {float(number_1) - float(number_2)}")
             elif operator == "*":
-                print(f"{number_1} * {number_2} = {int(number_1) * int(number_2)}")
+                print(f"{number_1} * {number_2} = {float(number_1) * float(number_2)}")
             elif operator == "/":
-                print(f"{number_1} / {number_2} = {int(number_1) / int(number_2)}")
+                print(f"{number_1} / {number_2} = {float(number_1) / float(number_2)}")
         except ValueError:
             print("Geçersiz İşlem!")
     except IndexError:
-        print("Geçersiz İşlem")
+        print("Geçersiz İşlem!")
